@@ -143,7 +143,7 @@
 							<input class="rounded" type="password" name="confirm_password" value="<?php echo set_value('confirm_password'); ?>" />
 							<span class="error"></span>
 				
-						<li><input type="submit" id="submit" name="rgstr_person" style="width:100px;"value="Registrera dig" /></li>
+						<li><input type="submit" class="submit" name="rgstr_person" style="width:100px;"value="Registrera dig" /></li>
 					</ul>
 				<?php echo form_close(); ?>
 			</div>
@@ -181,7 +181,7 @@
 						<span class="error"></span>
 
 				
-						<li><input type="submit" id="submit" name="rgstr_company" value="Registrera dig" /></li>
+						<li><input type="submit" class="submit" name="rgstr_company" value="Registrera dig" /></li>
 					</ul>
 				<?php echo form_close();?>
 			</div>
