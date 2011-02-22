@@ -60,7 +60,7 @@
 
 
 
-$('#submit').click(function(event){
+$('.submit').click(function(event){
 		
 	event.preventDefault();
 		
