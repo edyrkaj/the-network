@@ -722,9 +722,27 @@ label { margin-bottom: 5px; }
 
 #result{
 	float: left;
-	width: 500px;
+	width: 620px;
 	margin-top:0px;
 	margin-bottom: 30px;
+}
+.workey_jobs{
+	padding:5px;
+	margin-bottom:10px;
+	border: 1px solid gray;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: rgba(255,255,255,0.5);
+}
+.workey_jobs a{
+	font-size:14px;
+}
+.workey_jobs span{
+	float:right;
+	padding-left:5px;
+}
+.workey_jobs p{
+	border-top:1px solid black;
 }
 
 #searchinstructheader{

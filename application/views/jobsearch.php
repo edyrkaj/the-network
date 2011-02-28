@@ -16,32 +16,31 @@
 			
 			<div id="jobform">
 			<?php $data['style'] = 'width:200px'; ?>
-			<?php echo form_open('main/getads', $data) ?>
+			<?php echo form_open('main/getad', $data) ?>
 
 					<label for="searchword">Skriv in sökord:</label><br />
 					<input type = "text" id="searchform" name="searchinput"/><br /><br /><br/>
 					
 					<label id="" for="city">Var söker du jobb?</label><br />
+
+					<select name="location" id="location" size="5">
 					
-					<select name="location" id="location" multiple="multiple" size="5">
-					
-					<?php foreach ($districts as $value) { 
-						foreach ($value as $value) {
-					?>
-						
-					<option value="<?php echo $value ?>"><?php echo $value; ?></option>
-					
-				<?php
+					<?php foreach ($districts as $district) {								
+						echo "<option value='".$district['workey_key']."'>".$district['name']."</option>";
 					}
-					}
+					
 				?>
 
 				</select><br />
 				<input style="clear:both" type="button" value="sök jobb" id="submit" class='jobsearch'/></p>
 			</form>
 		</div>
-		<div id="searchimg"></div>
+		<div id="searchimg">
+			<?php 
+			?>
+		</div>
 		<div style="margin-top: -10px" id="line"></div>
-		<div id="result"></div>
+		<div id="result">
+		</div>
 	</div>
 </div>	
