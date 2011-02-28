@@ -129,7 +129,7 @@ function getdata() {
 	
 	function getad(){
 	
-		if (isset($_POST['ajax'])){
+		/*if (isset($_POST['ajax'])){
 		
 			$string = $this->input->post('string');
 			$input = $this->input->post('input');
@@ -137,7 +137,7 @@ function getdata() {
 			$this->load->model('get_ads');
 			$this->get_ads->getad($string, $input);
 				
-		}
+		}*/
 	}
 	
 		

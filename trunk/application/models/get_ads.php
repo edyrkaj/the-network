@@ -13,8 +13,8 @@ Class Get_ads extends CI_Model {
 	
 	
 	function location(){
-	
-		$this->db->select('name');
+
+		$this->db->select('workey_key, name');
 		$result = $this->db->get('district');
 		$districts = $result->result_array();
 		return $districts;
