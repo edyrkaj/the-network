@@ -1,6 +1,13 @@
 $(function(){
 	
+//hindra event när man trycker på enterknappen
+	function stopRKey(evt) {
+	  var evt = (evt) ? evt : ((event) ? event : null);
+	  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+	  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+	}
 
+	document.onkeypress = stopRKey; 
 //**********************************************************************************
 
 // Update main content
@@ -156,17 +163,18 @@ $(".jobsearch").live("click", function(event){
 	var search = $('#searchform').val();
 	var location = $('select#location').val();
 	$.get("../script/workeycurl.php",{'search':search,'location':location},function(data){
+
 		$(data).find('jobad').each(function(){
 			var id = $(this).find('jobid').text();
-			var link = $(this).find('link').text();
+			var link = $(this).find('link').text();			
 			var title = $(this).find('title').text();
 			var description = $(this).find('description').text();
 			var company = $(this).find('company').text();
 			var date = $(this).find('date').text();
 			var location = $(this).find('location').text();
-			$('<div class="workey_jobs"></div>').html('<a href="">'+title+'</a><span> '+location+'</span><span class="date"> '+date+'</span><p>'+description+'</p><p>'+company+'</p>').appendTo('#result');		
+			$('<div class="workey_jobs"></div>').html('<a href="'+link+'" target="_blank">'+title+'</a><span> '+location+'</span><span class="date"> '+date+'</span><p>'+description+'</p><p>'+company+'</p>').appendTo('#result');		
 		});
-	});
+	},"xml");
 });
 
 /*$(".jobsearch").live("click", function(event){		
