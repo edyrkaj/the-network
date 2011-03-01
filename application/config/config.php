@@ -28,7 +28,7 @@ $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------
