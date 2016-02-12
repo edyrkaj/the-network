@@ -1,0 +1,1 @@
+The Network is designed to make it easy for job seekers to communicate with each others and with companies they are interested in, so job seeking process would be more efficient.
